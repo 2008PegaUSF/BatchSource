@@ -1,0 +1,11 @@
+Polymorphism Overloading: Order of Operations
+1. Exact Match
+2. Conversion -  Primitives/Objects that cast themselves into other types (primitive to primitive && object to object)
+3. Un/Boxing- Going from primitive to object or vice versa
+4. Varargs- arguments wrapped into arrays
+		foo(int ... args){
+		//logic
+		}
+		
+		
+		foo(a,b,c,d,e) -> args[]={a,b,c,d,e}
