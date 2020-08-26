@@ -10,7 +10,7 @@ public class Driver {
 		AlbumDaoImpl adi= new AlbumDaoImpl();
 		
 		try {
-			System.out.println(adi.getAllAlbums());
+			System.out.println(adi.getAllAlbumsByArtistId(22));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
