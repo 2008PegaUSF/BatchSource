@@ -136,4 +136,8 @@ where "Name" like 'T%' or "Name" like 'B%';
 select * from gaby;
 
 
+--Triggers
+create trigger school_insert
+before insert on "school"
+for each row;
 

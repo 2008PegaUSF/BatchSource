@@ -44,3 +44,5 @@ public class AlbumDaoImpl implements AlbumDao{
 	}
 
 }
+
+select * from students where firstname = "drop * that has evcer exsited"
