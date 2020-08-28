@@ -26,7 +26,7 @@ s_name varchar(20),
 sch_id integer
 );
 
- 
+
 create table school(
 sch_id integer,
 sch_name varchar(20)
@@ -87,7 +87,7 @@ union all
 select "FirstName", "LastName" from "Customer";
 
 select "FirstName", "LastName" from "Employee"
-union 
+union
 select "LastName", "FirstName" from "Customer"; -- Same # of columns! takes column name from 1st query
 
 --Intersect and Intersect ALL
@@ -111,19 +111,19 @@ minvalue 975
 maxvalue 4000;
 
 select setval('mySeq',1977);
-select nextval('mySeq'); 
+select nextval('mySeq');
 
 insert into student values(nextval('mySeq'),'Morgen',1),(nextval('mySeq'),'Kimi',5);
 select * from student;
 
 --view
 create view my_view
- as 
+ as
  select "Artist"."Name", "Album"."Title"
  from "Album" inner join "Artist"
  on "Album"."ArtistId"= "Artist"."ArtistId";
- 
-select * from my_view; 
+
+select * from my_view;
 
 select * from my_view
 where "Name" like 'T%' or "Name" like 'B%';
@@ -134,10 +134,3 @@ select * from my_view
 where "Name" like 'T%' or "Name" like 'B%';
 
 select * from gaby;
-
-
---Triggers
-create trigger school_insert
-before insert on "school"
-for each row;
-
