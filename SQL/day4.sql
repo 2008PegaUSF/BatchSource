@@ -75,7 +75,7 @@ begin
 	return new;
 end;
 $$ language plpgsql;
-
+--Before trigger
 create trigger employee_insert
 before insert on "Employee"
 for each row
@@ -85,3 +85,40 @@ insert into "Employee"("EmployeeId","FirstName","LastName")
 values(-43,'matt','k');
 
 delete from "Employee" where "LastName" = 'k';
+
+insert into "Employee"("FirstName","LastName")
+values('matt','k');
+--After Trigger
+create sequence cus_id_seq
+start 65;
+
+create or replace function cus_insert()
+returns trigger as $$
+begin
+	if(TG_OP = 'INSERT') then
+	new."LastName" = 'Smith';
+	end if; 
+	return new;
+end;
+$$ language plpgsql;
+
+create trigger customer_insert
+after insert on "Customer"
+for each row
+execute function cus_insert();
+
+insert into "Customer" ("CustomerId","FirstName" ,"LastName","Email")
+values (88,'Jim','bob','a@a');
+
+insert into "Customer" ("CustomerId" , "FirstName" ,"LastName" , "Email" )
+values (92,'tim','bob','a@s');
+
+insert into "Customer" ("CustomerId" , "FirstName" , "LastName" , "Email" )
+values (87,'sam', 'bob', 'a@a');
+
+
+insert into "Customer" ("CustomerId" ,"FirstName" , "LastName","Email" ) 
+values(88,'jim','bob','a@a');
+
+insert into "Customer" ("CustomerId","FirstName" , "LastName","Email" ) 
+values(93,'tim','bob','a@a');
