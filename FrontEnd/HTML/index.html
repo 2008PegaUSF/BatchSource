@@ -35,6 +35,18 @@ way
                     - <title> provides a title for our web page (displays on the top of the browser window/tab)
         -->
         <title>HTML is sooo goooood</title>
+        <!--Setting up internal CSS-->
+        <style>
+            h5{
+                background-color: chartreuse;
+            }
+
+            h1{
+                color:#f242f5;
+                background-color:RGB(222, 155, 22);
+            }
+        </style>
+        <link type="text/css" rel="stylesheet" href="CSS/external.css"/>
      </head>
      <body>
          <h1>Roll Tide Yall</h1>
@@ -121,6 +133,21 @@ way
     </div>
 
     <a href="https://www.twitch.tv/kittenkillzu">Subscribe to Matt's Twitch!</a>
+
+    <div class="demo">
+        <h1 class="demo">This is all about CSS</h1>
+        <!--Inline CSS-->
+        <p id="a" style="color:red">This is an inline style example!</p>
+        <div>
+            <!--Internal CSS-->
+            <div>
+                <h5>This is using internal styling!</h5>
+                <h4>This is lame</h4>
+                <h5>THis is also using internal CSS</h5>
+            </div>
+        </div>
+    </div>
+
 
      </body>
 

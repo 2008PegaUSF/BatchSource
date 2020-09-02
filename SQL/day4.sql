@@ -122,3 +122,5 @@ values(88,'jim','bob','a@a');
 
 insert into "Customer" ("CustomerId","FirstName" , "LastName","Email" ) 
 values(93,'tim','bob','a@a');
+
+select now();
