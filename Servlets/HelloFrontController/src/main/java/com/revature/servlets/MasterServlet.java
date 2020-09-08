@@ -40,10 +40,24 @@ public class MasterServlet extends HttpServlet{
 	 */
 	
 	
+	/*
+	 * 
+	 * MASTER SERVLET:
+	 * 		It only handles requests and response.
+	 * 		It passes the objects onto the RequestHelper.
+	 * 			The RequestHelper is a class of our own making, it will dictate how the requests are handled. 
+	 * 
+	 * 		Why is having only one servlet better than having multiple servlets? 
+	 * 
+	 * 
+	 */
+	
+	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Hello");
 		
+		//We invoke the process method
 		RequestHelper.myVeryOwnProcessMethod(request,response);
 	}
 	

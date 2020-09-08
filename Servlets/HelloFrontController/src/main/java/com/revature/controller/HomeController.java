@@ -9,12 +9,19 @@ import javax.servlet.http.HttpServletResponse;
 
 public class HomeController {
 
+	/*
+	 * HomeController is a simple class, all it does is forward out home page. 
+	 * By forwarding the resource (the html page) we hide the resource path.
+	 */
+	
 	public static void getHomePage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		System.out.println("Welcome Home");
+
+		//To forward, we need use the request dispather
+		RequestDispatcher rd = request.getRequestDispatcher("/HomePage.html"); //What is the request dispather? What does it do?
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/HomePage.html");
+		rd.forward(request, response); //We invoke the forward() method inside of request dispatcher. 
 		
-		rd.forward(request, response);
+		
 		
 //		response.sendRedirect("http://localhost:8080/HelloFrontController/HomePage.html");
 		
