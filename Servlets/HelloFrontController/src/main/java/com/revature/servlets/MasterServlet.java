@@ -55,7 +55,7 @@ public class MasterServlet extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Hello");
+		
 		
 		//We invoke the process method
 		RequestHelper.myVeryOwnProcessMethod(request,response);
@@ -63,7 +63,7 @@ public class MasterServlet extends HttpServlet{
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Hello");
+		
 		
 		RequestHelper.myVeryOwnProcessMethod(request,response);
 	}

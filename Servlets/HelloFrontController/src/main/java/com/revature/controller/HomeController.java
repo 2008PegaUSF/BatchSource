@@ -16,15 +16,53 @@ public class HomeController {
 	
 	public static void getHomePage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		//To forward, we need use the request dispather
-		RequestDispatcher rd = request.getRequestDispatcher("/HomePage.html"); //What is the request dispather? What does it do?
+		if(request.getSession(false) == null ) {
+			response.setStatus(476); //476--you really screwed up
+			response.sendRedirect("https://www.fbi.gov/");
+		} else {
+			
+			//To forward, we need use the request dispather
+			RequestDispatcher rd = request.getRequestDispatcher("/HomePage.html"); //What is the request dispather? What does it do?
+			
+			rd.forward(request, response); //We invoke the forward() method inside of request dispatcher. 
+			
+		}
 		
-		rd.forward(request, response); //We invoke the forward() method inside of request dispatcher. 
 		
 		
 		
-//		response.sendRedirect("http://localhost:8080/HelloFrontController/HomePage.html");
 		
+	}
+	
+	public static void getLoginPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher rd = request.getRequestDispatcher("/MyVerySpecialLoginPage.html"); //What is the request dispather? What does it do?
+		
+		rd.forward(request, response);
+	}
+
+	public static void createPlanet() {
+		
+	}
+	
+	public static void recommendProdcutToUser() {
+//		invoke Python in here
+//		Python will tell me that I should recommend an orange
+		
+		return orange;
+	}
+	
+	public static void deleteAllPlanets() {
+		
+//		Presentation layer (Html, css, Javasscript)
+//		||
+//		Servlet Layer (Master Servlet)
+//		||
+//		(Request Helper)
+//		Controller Layer (Service Layer, Business logic, this is just JAva)
+//		||
+//		DAO layer(CRUD methods to our database, JDBC )
+//		||
+//		Database layer(Oracle, Postgres, MySQL)
 	}
 
 }
