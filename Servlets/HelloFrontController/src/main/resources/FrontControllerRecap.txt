@@ -1,0 +1,12 @@
+Front Control Design Pattern 
+
+Html files, JavaScript Files (presentation/ client layer)
+
+All requests will go to the Master Servlet
+
+Master Servlet will invoke the "Request Helper" 
+
+REquest Helper will acess different Controllers 
+
+Controllers do special Java logic. 
+

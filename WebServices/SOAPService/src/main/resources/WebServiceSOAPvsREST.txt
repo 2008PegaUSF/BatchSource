@@ -1,0 +1,133 @@
+Service:
+	Performing an action on behalf of someone. 
+
+In the context of programming:
+	Where an application, software or hardware offers functionality 
+	through a network. 
+
+Web Service:
+	Is an applciation, software or hardware that shares its functionality
+	through a network, in this case the internet.
+
+Why not send service via a jar file?
+		Update Anomalies
+			I can be stuck with an old version
+		Platform dependence
+			What to do if I have c#
+			What to do if I have Python 
+		Services that require DB access
+			Nobody wants to send their db credentials...
+
+Main Downside?
+	You need internet
+
+SOA-Service Orientated Architecutre 
+	Technique for building applications using loosely coupled services
+
+Benefits of SOA:
+	Modular Business Services
+	Code Resuse 
+	Scalability
+	Language Independent 
+	
+
+REST vs SOAP
+
+REST? Representational State Transfer
+	An architectural style protocol
+
+	What kinds of information can you send over? 
+	JSON, XML, Anything that can be represented as a string,
+	including Ben's patented format ??. 
+	
+	TANGENT WARNING[
+	Why JSON? JavaScript Object Notation, it's the STRING representation
+		of an object. Difference between water and a picture of water. 
+		 
+		You can unpack the JSON to something useful, 
+		ITS A STANDAR	]
+
+	Transfer Protocl?
+		Is only HTTP/HTTPS.
+
+	Contract bound?
+		It is not contract bound 
+
+TANGENT[ API is a way of interacting with something]
+
+	What makes an API RESTful? 
+	1) Stateless: does not retain/store any data bout the latest HTP request
+	2) Uniform-Interface: Each entitiys API should follow the same pattern, no operation should have more than 1 URL
+	3) Client-Server: They are seperate entities
+	4) Layered-system : Client cannot tell whether it is connected to the original server or another server
+	5) Cacheable: REsources must declare themsleves as cacheable. 
+	6) (Optional) Code on demand.
+
+	If you don't meed all these conditions, then you're REST based. 
+
+
+
+
+SOAP - Simple Object Access Protocl 
+	An XML-based message protocol 
+
+	What information format can we send over?
+		XML, only SOAP based XML. 
+	Transfer protocol?
+		Any protocol, HTTP, HTTPS, FTP, SMTP, My own protocol.
+	Contract bound?
+		YES uses WSDL. Web Service Description Language. 
+		
+		Contract-first: define the contract, then make the service around it
+		Contract-last: create the service, then make the contract
+
+	TANGENT[
+		JSON: {"key":"values"}
+		(Simple XML): <Planet><name>"Mercury"</name></Planet/>
+
+		SOAP message
+			<envelope>
+				<header>
+					//metadata, optionally can enable additional security
+				</header>
+
+				<body>
+					//the message content
+					<fault> //optional, how to hanlde errors and exceptions
+				</body>
+			</envelope>
+
+		SOAP wsdl:
+			<definitions>
+				<types>
+				<message>
+				<porttypes>
+					<operations>
+				<binding>
+				<service>
+					<port>
+
+
+Assignment
+Adventure, through a house 
+
+Pretty HTML pages 
+Buttons on the page that navigate me to the right directions
+
+Only endpoints "left","right", "forward" and "back" (relative position must be known)
+
+By default start in the lobby 
+
+Extra: Give an option to end the adventure and restart in the lobby. 
+
+
+
+
+
+
+
+	
+
+
+
+	

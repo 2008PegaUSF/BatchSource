@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/com/revature/services/HelloGenerator.java=UTF-8
+encoding//src/com/revature/services/HelloGeneratorService.java=UTF-8
+encoding//src/com/revature/services/HelloGeneratorServiceLocator.java=UTF-8
+encoding//src/com/revature/services/HelloGeneratorSoapBindingStub.java=UTF-8
