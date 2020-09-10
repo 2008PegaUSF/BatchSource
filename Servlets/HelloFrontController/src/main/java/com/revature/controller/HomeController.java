@@ -44,11 +44,12 @@ public class HomeController {
 		
 	}
 	
+	//We could invoke other endpoints inside of Java, this method might invoke python code by sending a request to a Python server
 	public static void recommendProdcutToUser() {
 //		invoke Python in here
 //		Python will tell me that I should recommend an orange
 		
-		return orange;
+//		return orange;
 	}
 	
 	public static void deleteAllPlanets() {

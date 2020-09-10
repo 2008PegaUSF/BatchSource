@@ -1,5 +1,6 @@
 package com.revature.controller;
-
+//This is a another implementation of AccountsController, different methods can be implemented
+//But we can still expect it to achieve the same outcome.
 public class WayBetterImplementation implements AccountsController {
 
 	@Override

@@ -20,7 +20,15 @@ public class AuthenticateController {
 	//Login method will accept user values from a form, using the .getParameter(*key*), after which it will forward or redirect to the "home" endpoint
 	public static void login(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 	
-		
+		/*
+		 * What are we validating?
+		 * 		The request we're getting is of POST method
+		 * 		The "username" is equal to "Bob"
+		 * 
+		 * Once everything is validated:
+		 * 		We create a session
+		 * 		Associate a "Planet" with the session
+		 */
 		
 		if(!request.getMethod().equals("POST")) {
 			//method guarding 
@@ -32,7 +40,10 @@ public class AuthenticateController {
 		
 		if(request.getParameter("username").equals("Bob")) {
 			
-			/*
+			/*Rather than creating an object, we could check whether the object exists in the dao. 
+			 * But I'll leave that to you all to implement. Here some psuedo code instead:
+			 * 
+			 * 
 			 * dao.selectUserByName(requiest.getParameter(user)) != null
 			 * "USER DOES NOT EXIST"
 			 * 

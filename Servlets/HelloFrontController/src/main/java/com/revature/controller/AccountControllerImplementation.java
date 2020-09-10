@@ -1,5 +1,6 @@
 package com.revature.controller;
 
+//This is an example of a Controller (implementatino of Accounts Controller)
 public class AccountControllerImplementation implements AccountsController {
 
 	@Override
