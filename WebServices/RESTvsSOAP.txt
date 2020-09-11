@@ -1,0 +1,101 @@
+REST
+	Representational State Transfer
+
+	Architectural Style Protocol 
+
+	What can we send over? 
+		Anything (Text based)
+
+	What is the transfer protocol? 
+		HTTP and HTTPS 
+
+	HTTP: Hyper Text Transfer protocol 
+		
+		HTTP request:
+				HEAD : Meta data, cookie, content-type, accept-language
+				BODY : The actual content.
+					public static void main(String[] args){
+					}
+
+					{"greetings: "hello"}
+					<greetings>hello</greetings>
+					Oi, remember to say "hello" for a greeting. And if they don't like it , say "goodbye".
+				
+ 
+				METHOD : Any HTTP Verb
+					GET (READ)
+					PUT (UPDATE)
+					POST (CREATE)
+					DELETE (DELETE)
+					TRACE 
+					HEAD
+		
+				URL : Where we find stuff
+
+		HTTP Response: 
+				HEAD :
+				BODY : 
+				STATUS CODE: What exactly happened at 100? 
+
+		Idempotent: Same outcome, regardless of number of action 
+		Safe: Nothing changes on serverside. 
+
+
+SOAP - Simple Object Acces Protocol 
+
+	A XML-based message protocol 
+	
+	Transfer protocol? 
+		Anything 
+
+	Contract Bound, wsdl.
+
+	SOAP Message : XML
+
+			<Envelope> 
+				<header>
+				<body>
+					<fault> //Optional, errors and exceptions.
+
+	WSDL : 
+		<definitions> 
+			<types> datatypes used in SOAP service
+			<message> parameters and return types expected during messaging
+			<porttype> Available operations that can be taken
+				<operations> A specific supported actions, delete, create
+						
+
+
+TECMAPS 
+					SOAP			REST
+Tools				JAX-WS, ApacheCXF  		Toolless 
+Exception Handling			Inbuilt			External resources
+Contract				Yes, a WSDL		Not contract bound (back in the day, there was a WADL)
+Message					XML			ANYTHING
+Atomicity 			Transactions built in (atomic)	Doesn't perform atomic transactions, only represents the state of the resource
+				(Configurable in the header)	(Can be made to be atomic, service will not be RESTful though)
+Protocol 				ANY PROTOCOL		HTTP/HTTPS
+Security 		Allows for additional security		HTTPS
+
+
+
+
+Transfer money from one account to another 
+PUT /accoutns/1 -- Money has been removed 
+PUT /accoutns/2 -- Money has been added 
+
+session(no success with put 2)
+
+RESTful constraints:
+			Uniform Interface
+			Client-Server
+			Code on Demand	
+			Stateless : Have to become Stateful
+			Cacheable
+			Layered System 
+
+XML namespaces? 
+
+Different ways to encode, RPC vs document?
+
+		
