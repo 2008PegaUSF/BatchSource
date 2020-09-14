@@ -16,6 +16,10 @@ public class HomeController {
 	
 	public static void getHomePage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		/*
+		 * dao.deleteObject ? 
+		 */
+		
 		if(request.getSession(false) == null ) {
 			response.setStatus(476); //476--you really screwed up
 			response.sendRedirect("https://www.fbi.gov/");
