@@ -48,7 +48,12 @@
         <thead>
             <tr>
                 <th>
-                    Image 
+                    <!-- () event binding -->
+                    <button class = 'btn btn-primary' (click) = 'toggleImage()'>
+                        {{showImage? 'Hide':'Show' }} Image 
+
+                    </button>
+                    
                 </th>
                 <th>
                     Name
@@ -64,10 +69,10 @@
                 Specifically, *ngFor will copy an entire lement (and all sub elements) for every elemnt in an 
                 array you provide it. 
             -->
-            <tr *ngFor = 'let temp of planets'>
+            <tr *ngFor = 'let temp of filteredPlanets'>
                 <td>
-
-                    <img [src] ='temp.image' [title] = 'temp.name'  
+                    <!-- Property binding, []-->
+                    <img *ngIf ='showImage' [src] ='temp.image' [title] = 'temp.name'  
                         [style.width.px] = 'imageWidth' [style.margin.px] = 'imageMargin'>
                          </td>
                 <td> {{temp.name}}</td>

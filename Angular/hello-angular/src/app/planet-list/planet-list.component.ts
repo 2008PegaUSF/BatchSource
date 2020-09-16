@@ -19,7 +19,11 @@ export class PlanetListComponent  {
    imageMargin = 2;
    showImage = false;
 
-  //used to demo 2-way binding 
+   toggleImage(){
+     this.showImage = !this.showImage;
+   }
+
+  //used to demo 2-way binding and creating a filter 
   actualInputField = '';
 
   get inputField(){
@@ -28,16 +32,30 @@ export class PlanetListComponent  {
 
   set inputField(temp: string){
     this.actualInputField = temp;
+    
+    this.filteredPlanets = this.actualInputField?
+        this.performFilter(this.inputField): this.planets;
   }
 
+performFilter(filterValue: string): Planet[]{
+
+  filterValue = filterValue.toLocaleLowerCase();
+
+  return this.planets.filter(
+
+    (planet: Planet) => planet.name.toLocaleLowerCase().indexOf(filterValue)!= -1);
+  
+}
+
   planets: Planet[];
+  filteredPlanets: Planet[];
 
   constructor() {
 
     this.planets = [
             {
               name: 'Earth',
-              image: 'placeholder',
+              image: 'https://images.unsplash.com/photo-1564053489984-317bbd824340?ixlib=rb-1.2.1&auto=format&fit=crop&w=2014&q=80',
               livibility: 5
             },
             {
@@ -54,9 +72,16 @@ export class PlanetListComponent  {
               name: 'Jupiter',
               image: 'placeholder',
               livibility: 1
+            },
+            {
+              name: 'Mercury',
+              image: 'http://dreamicus.com/data/mercury/mercury-06.jpg',
+              livibility: 2
             }
 
     ]
+
+    this.filteredPlanets = this.planets;
 
    }
 
