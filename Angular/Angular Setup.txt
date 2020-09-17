@@ -1,0 +1,48 @@
+Setting up Angular 
+
+Open terminal in file space and open 
+
+ng new [project_name]
+
+Open terminal inside project folder 
+
+ng serve -o --port 9001
+
+"-o" : This will auto open angular in a tab 
+"--port 9001" : Will change the port (default port is 4200)
+
+
+What is a framework?
+	A framework is a comprehensive library built to make coding complex applicaitons easier. 
+	Allows you do VERY complex things with smaller lines of code
+
+Framework vs Library?
+	YOUR code will utilise library functionality to help it along 
+	A FRAMEWORK will use YOUR code like a library to finetune its functionality
+
+What is Angular?
+	Angular is a javascript framework for building client applciations in HTML, CSS and javascript/typescript
+	We use this framework because creating an application with just javascript can become cumbersome when it becomes very large
+	Angular is component based. EACH PIECE of the htmp page will actually be a fragment referred as a "component".
+
+What is a component?
+	A component is a fragment of an HTML that will be used like buildingblock to build a FULL html page. 
+	You can quickly interchange component to modify the html view. 
+	Each component will consist of 3 files (and possibly one test file)
+
+Component file naming convention:
+	<component_name>.component.html <-- the html file
+	<component_name>.component.css  <-- the css file
+	<component_name>.component.ts   <-- the typescript file 
+
+	<component_name>.component.spec.ts <-- Testing file 
+
+Angular project foler structure:
+	src : is for our source code, as you would expect
+	e2e : means end to end testing (we won't be using this for now)
+	node_modules : holds all the packages (libraries) your project needs to funciton properly (aka its dependencies)
+	package.json: holds various scripts AND your dependencies configurations
+
+
+
+
