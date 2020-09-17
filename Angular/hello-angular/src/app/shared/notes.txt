@@ -6,5 +6,5 @@ Real World Exampled: IoC would be like asking a Subway worker to make your sandw
 
 What is Dependency Injection (DI) design pattern?
     DI is a subset of IoC   
-    The dpendency injection design pattern is SPECIFCALLYUU when the functionality you give up is 
-    in control of your dependency. The other ENTITY will then inject your dependencies into you when need them.
+    The dpendency injection design pattern is SPECIFCALLY when the functionality you give up is 
+    in control of your dependency. The other ENTITY will then inject your dependencies into you when the need arises.

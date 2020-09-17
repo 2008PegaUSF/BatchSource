@@ -84,7 +84,7 @@
                             Pipes can do things like uppercase, lowercase, format currency etc. 
                         -->
                 <!-- <td> {{temp.name | uppercase }}</td> -->
-                <td> {{ temp.name | prepend : 'Planet: ' | uppercase | lowercase}}</td>
+                <td appColorDirective > {{ temp.name | prepend : 'Planet: ' | uppercase | lowercase}}</td>
                 <!-- <td>{{temp.livibility}}</td> -->
                 <td>
                     <app-stars [livibility] = 'temp.livibility' [planetName] = 'temp.name' 

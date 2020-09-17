@@ -1,2 +1,39 @@
-<app-planet-list></app-planet-list>
-<app-test></app-test>
+<!-- <app-planet-list></app-planet-list> -->
+<!-- <app-test></app-test> -->
+
+
+
+
+<!--
+
+    All we need is the <router-oputlet> tag, once that is in place, it will allow us to start routing to our components. 
+
+        We can also use additional navigation tags
+-->
+
+<div>
+    <nav class = 'navbar navbar-default'>
+        <div class = 'container fluid'>
+            <a class = 'navbar-brand'>Hello</a>
+        </div>
+        <ul class = 'nav navbar-nav'>
+            <li class = 'nav-item'>
+                <a href = '/welcome'>Welcome</a>
+            <a routerLink = '/welcome'>Welcome Again</a>
+            </li>
+            <li class = 'nav-item'>
+                <a href = '/planets'>Planet List</a>
+                <a routerLink = '/planets'>Planet List</a>
+
+            </li>
+            <li class = 'nav-item'>
+                <a href = '/profile/default'>Profile</a>
+                <a routerLink = '/profile/default'>Profile</a>
+
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+<router-outlet></router-outlet>
