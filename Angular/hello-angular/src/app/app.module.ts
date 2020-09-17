@@ -7,19 +7,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { PlanetListComponent } from './planet-list/planet-list.component';
+import { PrependPipe } from './shared/prepend.pipe';
+import { PlanetGeneratorService } from './shared/planet-generator.service';
+import { StarsComponent } from './shared/stars/stars.component';
 
 //This is a decorator in Angular, looks like an annotation in Java. 
 //Speficially the "NgModule" decorator 
 @NgModule({
   declarations: [ // used for declaring components (and pipes)
-    AppComponent, TestComponent, PlanetListComponent
+    AppComponent, TestComponent, PlanetListComponent, PrependPipe, StarsComponent
   ],
   imports: [ // used to import external modules 
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ //used to declare services, the provider essentilally tells the Injector which object it needs to create & maintain
+    PlanetGeneratorService
+
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

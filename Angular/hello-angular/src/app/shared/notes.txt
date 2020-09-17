@@ -1,0 +1,10 @@
+Inversion Of Control (IoC)
+
+Is the process of GIVING UP CONTROL of some functionality to another ENTITY
+Real World Exampled: IoC would be like asking a Subway worker to make your sandwich, as opposed to 
+                        doing it yourself at home. 
+
+What is Dependency Injection (DI) design pattern?
+    DI is a subset of IoC   
+    The dpendency injection design pattern is SPECIFCALLYUU when the functionality you give up is 
+    in control of your dependency. The other ENTITY will then inject your dependencies into you when need them.
