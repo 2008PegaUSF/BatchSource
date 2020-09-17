@@ -1,6 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
+import { PlanetGeneratorService } from '../shared/planet-generator.service';
 import { Planet } from './planet';
 
+/**
+ * The injecto will AUTOMATIOCALLY check any calss with @Compnonet above it, so having @Injectable() above is 
+ *  redundant. 
+ */
+@Injectable()
 @Component({
   selector: 'app-planet-list',
   templateUrl: './planet-list.component.html',
@@ -13,6 +19,13 @@ export class PlanetListComponent  {
 
   //used to demo *ngIf
   showTable: boolean = true;
+
+  //used to demo star event
+  starEventString: string;
+
+  starEventWasTriggered(temp: string): void{
+    this.starEventString = temp;
+  }
 
    // dealing with the images
    imageWidth = 100;
@@ -50,37 +63,17 @@ performFilter(filterValue: string): Planet[]{
   planets: Planet[];
   filteredPlanets: Planet[];
 
-  constructor() {
+  
 
-    this.planets = [
-            {
-              name: 'Earth',
-              image: 'https://images.unsplash.com/photo-1564053489984-317bbd824340?ixlib=rb-1.2.1&auto=format&fit=crop&w=2014&q=80',
-              livibility: 5
-            },
-            {
-              name: 'Mars',
-              image: 'placeholder',
-              livibility: 3
-            },
-            {
-              name: 'Venus',
-              image: 'placeholder',
-              livibility: 4
-            },
-            {
-              name: 'Jupiter',
-              image: 'placeholder',
-              livibility: 1
-            },
-            {
-              name: 'Mercury',
-              image: 'http://dreamicus.com/data/mercury/mercury-06.jpg',
-              livibility: 2
-            }
+  constructor(private planetList: PlanetGeneratorService) {
 
-    ]
+    /**
+     * There is an entity inside of Angular called "The Injector", this injector entity will create objects of all the services
+     * your provide it and WHENEVER it sees a constructor w/ a parameter of the SAME type as an object the Injector contains then 
+     * the inject will inject the object into the contructor 
+     */
 
+    this.planets = planetList.getPlanets();
     this.filteredPlanets = this.planets;
 
    }

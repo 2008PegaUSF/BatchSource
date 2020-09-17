@@ -36,6 +36,9 @@
             <div class ='col-md-6'>
                 <h3>My Filter : {{inputField}}</h3>
             </div>
+            <div class ='col-md-6'>
+                <h3> Star Event : {{starEventString}}</h3>
+            </div>
         </div>
 
     </div>
@@ -75,8 +78,18 @@
                     <img *ngIf ='showImage' [src] ='temp.image' [title] = 'temp.name'  
                         [style.width.px] = 'imageWidth' [style.margin.px] = 'imageMargin'>
                          </td>
-                <td> {{temp.name}}</td>
-                <td>{{temp.livibility}}</td>
+
+                         <!-- Pipes transfomes data before the data is displayed
+                            Pipes use the | syntax
+                            Pipes can do things like uppercase, lowercase, format currency etc. 
+                        -->
+                <!-- <td> {{temp.name | uppercase }}</td> -->
+                <td> {{ temp.name | prepend : 'Planet: ' | uppercase | lowercase}}</td>
+                <!-- <td>{{temp.livibility}}</td> -->
+                <td>
+                    <app-stars [livibility] = 'temp.livibility' [planetName] = 'temp.name' 
+                    (starClicked)='starEventWasTriggered($event)'></app-stars>
+                </td>
             </tr>
 
         </tbody>
