@@ -1,0 +1,52 @@
+2 Ways to set up Docker
+
+Using Dockerfile (Using Demo project)
+Everything will be configured by the Docker file, we will not be interacting with the container too much 
+
+1) Define a file called 'Dockerfile' - any other name will not allow Docker to recognise it. 
+	1)a)We want to move a maven jar file into our Docker image so:
+	1)b) Maven build the project, use 'clean compile install'. A JAR file should be now created under your 'target' folder
+2) Edit the Dockerfile (Docker File should be in the root folder to make sure the paths match)
+
+		FROM openjdk:8-jdk-alpine
+		VOLUME /tmp
+		ADD target/demo-0.0.1-SNAPSHOT.jar demo.jar
+		ENTRYPOINT ["java","-jar", "/demo.jar"]
+		
+		NOTES : 
+					https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index
+					FROM: We're using an image built around JDK 8 
+					VOLUME: Before a device can utilise a storage device, the OS has to make it accessible through the device's file system. VOLUME mounts 
+						a directory inside of our container, can also be used to mount host directory inside the container. Enabling file sharing. 
+						https://blog.container-solutions.com/understanding-volumes-docker
+					ADD: Copies new files from directory, in this case our jar application. We map our jar file to "app.jar"
+					ENTRYPOINT: Gives docker the commandline arguments necessary for the applciation (java -jar -<jar file name>)
+
+3) Now we'll be executing some CLI Docker commands (Open up git bash in the same folder as the git folder)
+		1) Check Docker exists: "docker -v" (should return the version of docker if it exists)
+		2) "docker build -t <tagname>" : Creates a docker image, with -t used to give the image a name	
+		3) "docker run -p<host port>:<docker port> -p<host port>:<docker port> <image name>" : Create a docker container based on the image, -p will map
+																								the ports inside the container to the host machine (the port
+																								we will need to expose is 9999).
+																								
+		EXTRA
+		i) "docker container stop <container-name>" : Stops the container from running
+		ii) "docker container start <container-name>" : Will (re)start the container	
+		iii) "docker ps" : returns all the docker containers running	
+		iv) "docker ps -a" : retusn all the docker containers, running or not running
+		v) "docker image ls" : returns all docker images 
+		
+Not Using Docker File (Using Sample.war )
+We will be using a tomcat image from DockerHub (This is based on a java image and will allow us to run a war file, if we were only interested in
+	running a jar file then we would use a java image).
+	
+1) docker -v : check docker exists in your system
+2) docker pull tomcat : add tomcat image to your system 
+	2)a) docker image ls : shows the list of all the docker images on your system 
+3) docker run -p:<host-port>:8080 tomcat : Our sample project will be utilising port 8080, so we expose that port. Our container will be based on tomcat.
+	3)a) docker container ls : will return all the existing containers 
+4) docker cp "\file\path\yadda\yadda\sample.war" <container-name>:"/usr/local/tomcat/webapps/" : will copy sample.war file to docker container (into tomcat webapps/			
+																									so that tomcat will know to host it)
+EXTRA: 
+	winpty docker container exec -it <container-name> bash : this will allow us to enter the docker container. (You might not need to include winpty at the start)
+	

@@ -1,0 +1,28 @@
+Setting up Docker
+
+1) sudo yum install docker (installing docker)
+	1)a) docker -v (check to see docker is installed)
+
+2) sudo service docker start (allows docker daemon to start running in the background)
+
+3) sudo usermod -a -G docker ec2-user (allows us to run commands without sudo)
+	(remember to exit and resign into ec2)
+
+4) docker image pull jenkins/jenkins:lts
+
+5) docker volume create [YOUR VOLUME]
+
+6) docker container run -d \
+    -p [YOUR PORT]:8080 \
+    -v [YOUR VOLUME]:/var/jenkins_home \
+    --name jenkins-local \
+    jenkins/jenkins:lts
+
+d: detached mode
+-v: attach volume
+-p: assign port target
+—name: name of the container
+
+7) docker container exec \
+    [CONTAINER ID or NAME] \
+    sh -c "cat /var/jenkins_home/secrets/initialAdminPassword"11:08 PM 9/21/2020
