@@ -1,0 +1,14 @@
+To transfer files we input the following command:
+
+scp -i <file/path/key>.pem <file/path/myFile> ec2-user@<endpoint>:</file/path/inside/ec2-user/newFileNameInEC2>
+
+scp : Secure Copy 
+
+Note:
+	Ensure that you add "ec2-user", this will give you persmission to send over files. 
+	The filepath you specify in the EC2 will be where the file will be stored.
+
+
+Connect to the ec2 to ensure that the file has been transferred.
+ssh -i <key>.pem ec2-user@<endpoint> 
+

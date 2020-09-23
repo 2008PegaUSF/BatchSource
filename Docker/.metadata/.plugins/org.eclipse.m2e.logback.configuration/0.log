@@ -1,0 +1,55 @@
+2020-09-23 09:26:10,857 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-09-23 11:41:52,701 [Worker-11: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.hello.maven:HelloMaven:0.0.1-SNAPSHOT @ C:\Users\benBF\Documents\Git\0427Java\HelloMaven\pom.xml.
+2020-09-23 11:41:54,462 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /HelloMaven/src/main/java
+2020-09-23 11:41:54,463 [Worker-11: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /HelloMaven/src/test/java
+2020-09-23 11:41:54,560 [Worker-11: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3 sec
+2020-09-23 11:41:55,393 [Worker-14: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:41:55,401 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\main\resources
+2020-09-23 11:41:55,404 [Worker-14: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:41:55,410 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\test\resources
+2020-09-23 11:44:23,767 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2020-09-23 11:49:25,710 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2020-09-23 11:49:30,940 [Worker-15: Launching HelloMaven (1)] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\benBF\Documents\Git\0427Java\HelloMaven
+2020-09-23 11:49:30,942 [Worker-15: Launching HelloMaven (1)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean -Dstyle.color=always
+2020-09-23 11:49:36,419 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:49:36,425 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\main\resources
+2020-09-23 11:49:36,426 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:49:36,431 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\test\resources
+2020-09-23 11:50:09,664 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2020-09-23 11:50:57,251 [Worker-13: Launching HelloMaven (2)] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\benBF\Documents\Git\0427Java\HelloMaven
+2020-09-23 11:50:57,252 [Worker-13: Launching HelloMaven (2)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B test -Dstyle.color=always
+2020-09-23 11:54:10,035 [Worker-18: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:54:10,041 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\main\resources
+2020-09-23 11:54:10,042 [Worker-18: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:54:10,047 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\test\resources
+2020-09-23 11:54:22,805 [Worker-18: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:54:22,810 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\main\resources
+2020-09-23 11:54:22,811 [Worker-18: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:54:22,814 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\test\resources
+2020-09-23 11:54:33,733 [Worker-18: Launching Executing test in C__Users_benBF_Documents_Git_0427Java_HelloMaven] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\benBF\Documents\Git\0427Java\HelloMaven
+2020-09-23 11:54:33,733 [Worker-18: Launching Executing test in C__Users_benBF_Documents_Git_0427Java_HelloMaven] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B test -Dstyle.color=always
+2020-09-23 11:54:35,474 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:54:35,480 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\main\resources
+2020-09-23 11:54:35,481 [Worker-20: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:54:35,487 [Worker-20: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\test\resources
+2020-09-23 11:55:07,525 [Worker-20: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-09-23 11:55:07,798 [Worker-20: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.hello.maven:HelloMaven:0.0.1-SNAPSHOT @ C:\Users\benBF\Documents\Git\0427Java\HelloMaven\pom.xml.
+2020-09-23 11:55:07,959 [Worker-20: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /HelloMaven/src/main/java
+2020-09-23 11:55:07,960 [Worker-20: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /HelloMaven/src/test/java
+2020-09-23 11:55:08,023 [Worker-20: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 0 sec
+2020-09-23 11:55:08,225 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:55:08,230 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\main\resources
+2020-09-23 11:55:08,231 [Worker-21: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:55:08,238 [Worker-21: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\test\resources
+2020-09-23 11:55:16,134 [Worker-13: Launching Executing test in C__Users_benBF_Documents_Git_0427Java_HelloMaven] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\benBF\Documents\Git\0427Java\HelloMaven
+2020-09-23 11:55:16,134 [Worker-13: Launching Executing test in C__Users_benBF_Documents_Git_0427Java_HelloMaven] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B test -Dstyle.color=always
+2020-09-23 11:55:18,387 [Worker-18: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:55:18,393 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\main\resources
+2020-09-23 11:55:18,394 [Worker-18: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:55:18,398 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\test\resources
+2020-09-23 11:57:25,307 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2020-09-23 11:57:35,660 [Worker-23: Launching HelloMaven (3)] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\benBF\Documents\Git\0427Java\HelloMaven
+2020-09-23 11:57:35,660 [Worker-23: Launching HelloMaven (3)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean package -Dstyle.color=always
+2020-09-23 11:57:45,309 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2020-09-23 11:57:45,315 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\benBF\Documents\Git\0427Java\HelloMaven\src\main\resources
+2020-09-23 11:57:45,316 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
