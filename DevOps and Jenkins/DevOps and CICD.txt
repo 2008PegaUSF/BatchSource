@@ -1,0 +1,45 @@
+DevOps:
+
+DevOps is how code is being developed and deployed. Nowadays, it's tightly integrated with CICD pipelines
+(Continous integration, continous deployment/delivery). It automates the steps inside the software deployment
+lifecycle. 
+
+Before CICD?
+	Nigtly Build:
+		Developers do some work -> they commit the changes to source code ->
+		code is pulled every night and build over-night (feedback occurs once a day)
+
+CICD:
+	We can build the project after every commit
+
+Jenkins?
+	Continous Integration tool (allows continous development, tests and deployment of newly created codes),
+	plygins built for CI purposes e.g. build, continous testing, continous integrat, version control, deployment, etc. 
+
+	Open source! We get all the options in the world, but we have to configure all the options. 
+
+Other tools (open source):
+		Bamboo - CI tool runs multiple builds in parallel (for faster integration), test different builds in different enviornments quicker
+		Jenkins - Automation for projects (Hudson is original version of Jenkins)
+		BuildBot - Framework for automating software build, tests and release processes
+		Apache Gump - Specifically in Java (API and functionality testing)
+		Travis CI - For stored code in GitHub (build and testing)
+		Buddy 
+		AWS pipeline
+
+
+Feature of Jenkins:
+	Easy installation (self-contained Java-based program)
+	Easy configuration (via its web interface)
+	Plugins (lot and lots of plugins, can be found in update center)
+	Extensible (can be extended via tis plugin atrchitecutre)
+	Distributed (can be easily distributed across your network)
+
+Jenkins Pipeline:
+	Code commit (to a git server)
+	Jenkins will build a verion of your porject 
+	Jenkins will test your project (unit testing)
+	RElease - create a release nevironment 
+	Deploy/Deliver environment 
+
+

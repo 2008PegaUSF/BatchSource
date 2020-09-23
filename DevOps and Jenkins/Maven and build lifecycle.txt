@@ -1,0 +1,37 @@
+What is Maven?
+
+Maven is Yiddish for "accumulator of knowledge:, developed by Apache Software foundation since 2003
+
+So far, we've used it as a dependency manager. It handles all of our dependeicy easily by automatically 
+downloading the appropriate libraries from remote repo. 
+
+But Maven is also a build automation tool. It allows us to compile our projects, will all the dpendencies inside it, 
+	into a distributable format, i.e. jar or war files. 
+
+Few Maven build options: https://www.journaldev.com/33645/maven-commands-options-cheat-sheet
+
+Build -> Testing -> Deploy 
+
+
+validate -> compile -> test -> package -> verify -> install -> deploy 
+|		|	|	|		|	|	|
+
+
+validate: make sure everything is correct and all teh information is available. 
+compile: compile the source code 
+test: test the compiled source code, using a testing framework (JUnit)
+package : converts the compiled code and packages it into a distributed format, i.e. JAR
+verify : runs further checks, integratino tests 
+install: adds it to a local repository 
+deploy: deploys to a remote repository
+
+clean: removes all the old build files
+
+
+
+
+
+
+
+
+
