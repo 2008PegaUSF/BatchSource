@@ -19,9 +19,11 @@ public class MainDriver {
 
 		insertInitialValues();
 		
-		System.out.println(pdao.selectPlanetById(1));
-		System.out.println(pdao.selectPlanetById(2));
-		System.out.println(pdao.selectPlanetById(3));
+//		System.out.println(pdao.selectPlanetById(1));
+//		System.out.println(pdao.selectPlanetById(2));
+//		System.out.println(pdao.selectPlanetById(3));
+		
+		System.out.println(pdao.selectPlanetByName("Earth"));
 
 	}
 

@@ -47,6 +47,19 @@
 	 				(default size is 20)
 	 		 -->
 	 			<property name = "hibernate.connection.pool_size">10</property>
+	 			
+	 		<!-- 4 settings for hbm2ddl.auto
+	 		
+	 			CREATE : drops all existing tables & other objects with name you have provided in the annotations, 
+	 						then hibernate will create your schema from scratch. (Not the best for production, only for Dev purposes)
+	 			
+	 			VALIDATE : Hibernate checks to make sure the schema exists as expected before operating. 
+	 			
+	 			UPDATE : Hibernate will not delete anything, it'll only add/modify existing scehma elements, so the schema works with hibernate
+	 						schema
+	 			
+	 			NONE : well... it means hibernate won't do anything to your schema automcatically. 
+	 		 -->
 	 			<property name = "hibernate.hbm2ddl.auto">create</property>
 	 			
 	 			<mapping class = "com.revature.models.Planet"/>
