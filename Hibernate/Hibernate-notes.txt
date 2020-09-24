@@ -1,0 +1,53 @@
+Session Factory:
+
+	A session factory is an expensvie to create, thread safe object. It's 
+	intended purpose os to tbe shared by all application threads. It is created 
+	once, usually application startup. 
+
+Session
+	
+	A session is an inexpensive, non-trhead safe object. You should use once 
+	and then disard away. A session will not obtain a JDBC conneciton or 
+	a Datasource, until it is needed. It won't consume resource until used. 
+
+Hibernate allows for caching, specifically 2 levels. 
+
+Level 1 
+	Is setup by default, a L1 cache is specifc to a sesison. 
+	You don't have to configure this, it is there by default. 
+
+Level 2
+	L2 cache are scoped to the entire SessionFacotry. So all session can access this data.
+	In order to setup L2 cacching, you will a 3rd-party provider.
+	e.g. EHCCache, JBossCache, SwarmCache. (add these dependencies to the pom.xml)
+
+----------------------------------------------------------------------------------------------------------------------
+States of object in Hibernate
+
+As you manipulate and store objects into the databse, the objects will go through 3 stages of existence. 
+
+Transient
+	The entity (object) is new and has NOT been associated with any sessions. 
+Persistent
+	The entity is currently part of a session 
+Detached
+	The entity WAS associated with a session, HOWEVER the session is now closed. 
+------------------------------------------------------------------------
+
+What are concurrency problems? 
+
+	Probemls can occur when multiple transcataions are executing at the same time. 
+	4 categories:
+
+		Lost updates
+		Dirty reads
+		Unrepeatable reads
+		Phantom reads 
+
+	How do we deal concurency inssues, through isolation levels. 
+
+		Read uncommitted
+		Read committed
+		Repeatable read
+		Serializable 
+			

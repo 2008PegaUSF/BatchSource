@@ -6,7 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
-import com.revature.models.Planet;
+import com.revature.model.Planet;
 import com.revature.util.HibernateUtil;
 
 public class PlanetDao {
@@ -32,7 +32,7 @@ public class PlanetDao {
 		ses.save(p);
 		
 		tx.commit();
-		ses.close();
+//		ses.close();
 		
 	}
 	
@@ -44,7 +44,7 @@ public class PlanetDao {
 		ses.update(p);
 		
 		tx.commit();
-		ses.close();
+//		ses.close();
 		
 	}
 	
@@ -56,7 +56,7 @@ public class PlanetDao {
 		ses.delete(p);
 		
 		tx.commit();
-		ses.close();
+//		ses.close();
 		
 	}
 	
@@ -93,7 +93,7 @@ public class PlanetDao {
 		
 		Planet p = ses.get(Planet.class, id);
 		
-		ses.close();
+//		ses.close();
 		
 		return p;
 	}
