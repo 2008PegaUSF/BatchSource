@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+
+	<!-- 
+	
+			What is Hibernate?
+				Hibernate is an ORM and persistence framework.
+				
+			What is an ORM?
+				Object Relational  Mapping. ORMs take objects in your programming language and converts them into sql rows inside database tables. 
+				
+			What is persistence?
+				Storing your information/dtat in a form that is durable (in our DV)	
+				
+			What are the benefits of Hibernate?
+				As Java developers, we no longer have to write complex sql queries. Hibernate will performs LOTS of complexity for us. 
+				> Hibernate is object oriented.
+				> Hibernate is fast
+					It has caching 
+					It uses connection pools to minimize bottle necked speeds caused by creating connection through the network. 
+				> Hibernate is modular: 
+					You are able to write ode using hibernate later swithc SQL languages. You just need to switch the driver.
+	 -->
+	 
+	 <hibernate-configuration>
+	 		<session-factory>
+	 		<!-- JDBC stuff -->
+	 			<property name = "hibernate.connection.username">postgres</property>
+	 			<property name = "hibernate.connection.password">password</property>
+	 			<property name = "hibernate.connection.url">jdbc:postgresql://database-1.cqoseij0k35s.us-east-2.rds.amazonaws.com/postgres</property>
+	 			<property name = "hibernate.connection.driver_class">org.postgresql.Driver</property>
+	 			<property name = "hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+	 			
+	 		<!-- Additional Hibernate Options -->
+	 			
+	 			<property name = "hibernate.show_sql">false</property> <!-- Showss the sql scripts being executed! -->
+	 			<property name = "hibernate.format_sql">true</property> <!-- Shows the sql in a nicer way, more spaced out though! -->
+	 			
+	 		<!-- Connection Pool 
+	 				A method of speeding up database calls. 
+	 				Hibernate will create 10 connections to the db when it starts up. 
+	 				Everytime a session created, a session will "borrow" an active connection 
+	 				When you close a session, the connection is freed up for another session to use.
+	 				(default size is 20)
+	 		 -->
+	 			<property name = "hibernate.connection.pool_size">10</property>
+	 			
+	 		<!-- 4 settings for hbm2ddl.auto
+	 		
+	 			CREATE : drops all existing tables & other objects with name you have provided in the annotations, 
+	 						then hibernate will create your schema from scratch. (Not the best for production, only for Dev purposes)
+	 			
+	 			VALIDATE : Hibernate checks to make sure the schema exists as expected before operating. 
+	 			
+	 			UPDATE : Hibernate will not delete anything, it'll only add/modify existing scehma elements, so the schema works with hibernate
+	 						schema
+	 			
+	 			NONE : well... it means hibernate won't do anything to your schema automcatically. 
+	 		 -->
+	 			<property name = "hibernate.hbm2ddl.auto">create</property>
+	 			
+	 			<mapping class = "com.revature.models.Planet"/>
+	 			
+	 			<!--  THIS is how we wire a named query using a mapping file -->
+	 			<mapping resource = "named-queries.hbm.xml"/>
+	 		</session-factory>
+	 </hibernate-configuration>

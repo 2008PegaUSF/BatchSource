@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<!-- When making a Spring bean, select context and beans -->
+
+<!--  What is a Spring bean?
+		A spring bean is an object that you've told Spring to manage for you. (Nothing to do with Java Bean)
+			Below we're going to define a DAO object for Spring to create and manage for us -->
+			
+		<bean name = "PlanetDAOFIRST" class = "com.revature.repository.PlanetDAOImpl"></bean>
+		
+		<bean name = "OraclePlanetDAO" class = "com.revature.repository.PlanetDAOImplORACLE"></bean>
+		
+		<bean name = "PlanetServiceFIRST" class = "com.revature.service.PlanetServiceImpl">
+			<property name="pdao" ref="OraclePlanetDAO"></property>
+		</bean>
+
+</beans>

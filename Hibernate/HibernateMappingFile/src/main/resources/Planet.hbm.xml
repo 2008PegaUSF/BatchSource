@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        
+       <hibernate-mapping package = "com.revature.models">
+       		<class name = "Planet" table = "planet_table">
+       			<meta attribute = "description">
+       				description, description and more description 
+       			</meta>
+       			
+       			<!-- PRIMARY KEY -->
+       			<id name = "id" type = "int" column = "planet_id">
+       				<generator class = "native"/>
+       			</id>
+       			
+       			<!-- PROPERTIES -->
+       			<property name = "name" type = "string">
+       				<column name = "planet_name" not-null = "true" unique ="true"/>
+       			</property>
+       			<property name = "description" column = "planet_decription" type = "string"/>
+       			
+       		</class>
+       </hibernate-mapping>
