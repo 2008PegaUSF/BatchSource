@@ -11,12 +11,73 @@
 		A spring bean is an object that you've told Spring to manage for you. (Nothing to do with Java Bean)
 			Below we're going to define a DAO object for Spring to create and manage for us -->
 			
-		<bean name = "PlanetDAOFIRST" class = "com.revature.repository.PlanetDAOImpl"></bean>
+		<!-- <bean name = "PlanetDAOFIRST" class = "com.revature.repository.PlanetDAOImpl"></bean> -->
 		
-		<bean name = "OraclePlanetDAO" class = "com.revature.repository.PlanetDAOImplORACLE"></bean>
+		<!-- <bean name = "OraclePlanetDAO" class = "com.revature.repository.PlanetDAOImplORACLE"></bean> -->
 		
+		<!-- What is Bean Wiring?
+				Bean wiring is the process of telling spring to manage objects for us, while also defining what dependencies those objects may have
+				(spoilers: we can also do this using annotations)
+		 -->
+		 
+		 <!-- 
+		 		Types of injections:
+		 			Setters
+		 			Constructors 
+		 			Field
+		  -->
+		  
+		  <!-- Scoeps of a Spring Bean
+		  		Singleton (the default) tells Spring to ONLY ever make one instance
+		  		Prototype tell Spring that whenever someone asks for that ben THEN create another instance of that bean. 
+		  		Request
+		  		Session
+		  		GlobalSession 
+		   -->
+		
+<!-- MANUAL WIRING -->
+	<!-- SETTER INJECTION -->
+		<!-- Define the service dependency (from the service layer) -->
+		<!--  
 		<bean name = "PlanetServiceFIRST" class = "com.revature.service.PlanetServiceImpl">
-			<property name="pdao" ref="OraclePlanetDAO"></property>
+			<property name = "pdao" ref = "PlanetDAOFIRST"/>
 		</bean>
-
+		-->
+		<!-- 
+		<bean name = "PlanetServiceSECOND" scope = "prototype" class = "com.revature.service.PlanetServiceImpl">
+			<property name = "pdao" ref = "OraclePlanetDAO"/>
+		</bean>
+		 -->
+	<!-- CONSTRUCTOR INJECTION -->
+	<!-- 
+		<bean name = "PlanetServiceCONSTRUCT" class = "com.revature.service.PlanetServiceImpl">
+			<constructor-arg index = "0" ref = "OraclePlanetDAO"></constructor-arg>
+			<constructor-arg index = "1" type = "int" value = "5"></constructor-arg>
+		</bean>
+	 -->
+	 
+	 
+	 <!-- 
+	 	What is Autowiring?
+	 		Autowiring is when Spring scans your objects to determine WHICH dependencies it needs. 
+	 		
+	 	Injection vs Autowiring?
+	 		Injection is HOW to inject Dependencies 
+	 		Autowiring is asking WHICH depenencies do we need? 
+	 		
+	 	Autowiring modes:
+	 		"no" : means Spring will NOT autowire anything.  This is the defaultsetting 
+	 		"byType" : means Spring will look at the class' datatypes then match those datatypes to our beans in the IoC Container. Setter injection.
+	 		"byName" : means Spring will look at the class' property variable name, then match those to the IoC container. Setter injection. 
+	 		"constructor" : works similar to byType, excpet it inject using the constructor with the most dependencies. If the byType strategy fails, 
+	 			then the constructor setting will turn to the byName strategy. 
+	 		
+	  -->
+	 
+	<!-- <bean name = "PlanetDAO" class = "com.revature.repository.PlanetDAOImpl"/> -->
+	<bean name = "PlanetServiceAUTOWIRED" class = "com.revature.service.PlanetServiceImpl" autowire = "byType"></bean> 
+	
+	<context:annotation-config/>
+		<context:component-scan base-package="com.revature.service"></context:component-scan>
+	 	<context:component-scan base-package="com.revature.repository"></context:component-scan>
 </beans>

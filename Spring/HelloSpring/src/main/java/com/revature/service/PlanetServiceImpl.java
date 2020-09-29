@@ -2,21 +2,52 @@ package com.revature.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.revature.models.Planet;
 import com.revature.repository.PlanetDAO;
-import com.revature.repository.PlanetDAOImpl;
 
+@Component("PlanetServiceFULLANNO")
 public class PlanetServiceImpl implements PlanetService{
 	
+	@Autowired
+	/*
+	 * Field Injection is bad in some ways:
+	 * 		Lack of Encapsulation 
+	 * 		Unable to trigger additional setter or constructor logic 
+	 * 		Tightly couples our application to the Spring IoC Container (not all frameworks allow us to do it)
+	 */
 	private PlanetDAO pdao;
 	
 	
+	
+
+	public PlanetServiceImpl() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+//	@Autowired
+	public PlanetServiceImpl(PlanetDAO pdao) {
+		super();
+		this.pdao = pdao;
+		System.out.println("Inside service, all args");
+	}
+
+	public PlanetServiceImpl(PlanetDAO pdao, int aNumber) {
+		super();
+		this.pdao = pdao;
+		System.out.println("Inside service, all args");
+	}
 
 	public PlanetDAO getPdao() {
 		return pdao;
 	}
 
+//	@Autowired //SETTER INJECTION
 	public void setPdao(PlanetDAO pdao) {
+		System.out.println("Inside setter, service layer");
 		this.pdao = pdao;
 	}
 
