@@ -74,6 +74,21 @@ public class AspectExample {
 	 * 		It can also halt methods from ever executing their logic. 
 	 */
 	
+	
+	/*
+	 * ASPECT?
+	 * 
+	 * ADVICE?
+	 * 
+	 * POINCUT EXPRESSION?
+	 * 
+	 * JOINPOINT?
+	 * 
+	 * CROSS CUTTING CONCERNS?
+	 * 
+	 * 
+	 */
+	
 	@Around("execution(* *(..))")
 	public void allAround(ProceedingJoinPoint pjp) throws Throwable {
 		

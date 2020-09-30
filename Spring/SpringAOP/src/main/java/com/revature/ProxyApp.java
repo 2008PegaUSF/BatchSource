@@ -50,10 +50,21 @@ public class ProxyApp {
 	}
 	
 	protected Boolean orbitEarth() {
+		// .security()
+		// .exceptionhandlng()
+		
+		//.caching();
+				// .logging()
 		return false;
 	}
 
 	public Integer painting(int tools, double paint) {
+		
+		// .security()
+				// .exceptionhandlng()
+				
+				//.caching();
+						// .logging()
 		return 0;
 	}
 }
