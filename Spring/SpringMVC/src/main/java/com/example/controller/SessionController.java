@@ -37,6 +37,7 @@ public class SessionController {
 	}
 	
 	/*
+	 * Have a way for clients to send information to the server (i.e. user name and user password)
 	 * give an endpoint to logout  (i.e. invalidate the session)
 	 */
 

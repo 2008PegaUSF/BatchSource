@@ -60,7 +60,7 @@ public class PlanetController {
 	/*
 	 * Have a go at using path information to select planet by id and have a go at select planet by name using param values (chuck in a post mapping in there as well)
 	 * 
-	 * Use form information as well, somewhere. 
+	 * Use form information as well, somewhere (updating planet)
 	 */
 	
 
