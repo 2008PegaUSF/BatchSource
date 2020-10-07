@@ -1,0 +1,50 @@
+Microservices 
+
+Levarging Spring Boot 
+
+I'm going to make 3 business services 
+
+2 other services that leveage Eureka dn Zuul 
+
+Eureka 
+Zuul 
+Hystrix 
+Ribbon 
+
+Eureka
+	problem: As a developer or maintainer, you want a simple way to track all of your service instances
+
+	Is a service registry. It keep track of all of your instances and their health. It acts as a phone book. 
+
+
+Zuul 
+	problem: We don't want the user to know about your distributed system, they should experience it as a 
+		monolothic application, i.e. a single endpoint. 
+
+	We need a unified API gateway, we only need to access a single port to recieve information
+
+Ribbon 
+
+	problem: How do we make sure that every instance of our service is handling simliar amounts of traffic.
+
+	load balancer. 
+
+Hystrix
+
+	Circuit breaker.
+
+	Is a load balancer. It handles traffic for our services, so that they don't crash. 
+
+
+
+Mini Assignment 
+
+	I want you to create 4 services that are registered in Eureka, and also route managed by Zuul. 
+	I want you to create a service that will persist data (to a database) - acts as a repo 
+	I want you to create a seperate service, that hardcodes in dummy data (backup repo) 
+	I want your other services to leverage the "dao" services to execute their own logic. 
+		Inside of that service, use Hystrix to switch from the unsafe dao service to the 
+		safe hardcoded dao service. 
+	I want you to create a post filter in Zuul, that informs me on what endpoint I'm pinging. 
+
+

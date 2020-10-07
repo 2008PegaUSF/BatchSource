@@ -16,9 +16,11 @@ export class AjaxServiceService {
 
 
   loginRequest(): Observable<string>{
+
     return this.myHttpClient.get<string>('http://localhost:9090/login',
     {withCredentials: true}
     );
+    
   }
 
   logoutRequest(): Observable<string>{

@@ -48,6 +48,7 @@ export class LandingPageComponent implements OnInit {
 
       data => {
         const ourField = 'message';
+        //if message == false, invoke another httprequestion function
         this.logoutMessage = this.logoutMessage + ' ' + data[ourField];
       }
     )

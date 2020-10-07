@@ -9,6 +9,11 @@ import com.example.model.Planet;
 public interface PlanetDao extends CrudRepository<Planet, Integer>{
 	
 	/*
+	 * 
+	 * JPArepository vs CrudRepository? 
+	 * 
+	 * application.properties v applicaiton.yml
+	 * 
 	 * Implement our CRUD methods and then some for us. 
 	 */
 	

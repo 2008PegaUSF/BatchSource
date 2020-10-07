@@ -1,0 +1,49 @@
+Spring Core 
+	Bean
+		Lifecycel 
+		Scopes 
+	IoC Container
+		Dependency Injecction 
+	@Injecting vs @Autowiring 
+	Module 
+
+Spring AOP
+	Advice
+	CCC
+	Aspect
+	Annotations 
+
+Spring ORM
+	Annotaion 
+	@Transactional 
+	Contextual Session 
+
+Spring MVC
+	Design Patterns
+	Annotations 
+	Path or Query parameters? 
+	Produce and consume JSON? 
+
+Spring Data
+	Annotations 
+	Crud Repository?
+	Crud vs JPA? 
+	Naming conventions inside crud
+
+Spring Boot (NOT A MODULE)
+	How do I configure boot? 
+	Actuator?
+	DevTools? 
+	Spring Boot Profiles? 
+	
+Overview of Web Services 
+	SOAP
+		What is it?
+		What are the tags
+		What are the messaging structure
+		WHat is the protocol
+
+	REST
+		HTTP
+		
+	

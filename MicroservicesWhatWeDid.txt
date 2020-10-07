@@ -1,0 +1,33 @@
+Our goals for today was to learn about microservices and 
+the netflix OSS stack that help us to manage microservices. 
+
+We deployed a service : planet-one (as an example of Spring boot)
+
+Our next step was to create a service registry 
+	Eureka - to keep track of our other future services 
+
+We created a slighlty more advance service: planet-two
+	This service is meant to act as a psuedo dao layer.
+	i.e. a (rest) controller that returns a list of objects. 
+
+How to create a single point of access to all of our 
+	services? We levaraged Zuul 
+
+Zuul leveraged Eureka to find out which services to navigate to?
+	WE further configured it to decide which paths we want 
+	in the first place. 
+Zuul also leverages Ribbon. To balance the load between seperate instances
+	of services. 
+
+Finally we wanted a service that levarages anotehr service. 
+
+Planet-three:
+	Used RestTemplate to retrieve infromation from planet-two 
+	(i.e. our psuedo dao service)
+	We used Zuul to find our end point 
+	We used Hystrix, incase if planet-two failed. 
+
+We did Zuul filtering. 
+	Setting filter logic, trigger conditions, ordering of filters and type of filters
+	(e.g. pre, post, etc. )
+
